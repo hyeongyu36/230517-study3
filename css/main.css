@@ -1,0 +1,144 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  transition: all ease-in 0.5s;
+}
+body {
+  padding: 30px;
+}
+img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  /* margin-bottom: 20px; */
+}
+.img-box {
+  position: relative;
+  width: 150px;
+  display: block;
+}
+.hover-box {
+  background: url("../images/dog.jpg") no-repeat center;
+  background-size: cover;
+}
+/* box1 */
+.box1 .hover-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.img-box.box1:hover .hover-box {
+  transform: translate(10px, 10px);
+  opacity: 1;
+}
+
+/* box2 */
+.box2 {
+  height: 100px;
+  margin-bottom: 100px;
+}
+.box2 img {
+  transform: translateY(60%);
+}
+.box2 .hover-box {
+  height: 40px;
+  padding: 10px 0;
+  margin-top: -5px;
+}
+.box2:hover img {
+  transform: translateY(0);
+}
+
+/* box3 */
+.box3 {
+  height: 100px;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+.box3 .hover-box {
+  height: 50px;
+  /* padding: 5px 0; */
+  margin-top: -5px;
+}
+.box3:hover img {
+  height: 50px;
+}
+
+/* box4 */
+.box4 {
+  width: 220px;
+  display: flex;
+  perspective: 500px;
+  margin-bottom: 50px;
+}
+.box4 img {
+  width: 150px;
+  order: 2;
+  position:fixed;
+}
+.box4 .hover-box {
+  width: 70px;
+  height: 100px;
+  transform: translateX(100%) rotateY(-90deg);
+  transform-origin: 0 50%;
+  opacity: 0;
+}
+.box4:hover .hover-box {
+  opacity: 1;
+  transform: translateX(100%) rotateY(0deg);
+}
+
+/* box5 */
+.box5 {
+  position: relative;
+  margin-bottom: 50px;
+  margin-left: 20px;
+}
+.box5 img {
+  width: 200px;
+  height: 150px;
+  text-align: center;
+}
+.box5 .hover-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 20px;
+  left: -20px;
+  transform: scale(0.3);
+  z-index: -1;
+}
+.box5:hover img {
+  width: 80px;
+  height: 80px;
+  margin-top: 35px;
+}
+.box5:hover .hover-box {
+  transform: scale(1, 1);
+}
+
+/* box6 */
+.box6{
+  position: relative;
+  margin-bottom: 50px;
+}
+/* .box6 img{
+  width: 150px;
+} */
+.box6 .hover-box{
+  width: 110%;
+  height: 160px;
+  position: absolute;
+  top: -10px;
+  z-index: -1;
+  left:-5%;
+  opacity: 0;
+  /* overflow: hidden; */
+}
+.box6:hover .hover-box{
+  opacity: 0.8;
+}
